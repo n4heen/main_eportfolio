@@ -14,10 +14,11 @@
     <section id="landing-page">
         <nav>
             <figure>
-                <img id="personal-logo" src="/E_PORTFOLIO_LOGO.png" alt="">
+                <img id="personal-logo" src="/assets/E_PORTFOLIO_LOGO.png" alt="">
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
+
                     <a href="#" class="nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
@@ -69,19 +70,92 @@
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class=" modal__title modal__title--about"> Here's a bit about me</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Developer</h4>
+                <p class="modal__para">I'm an aspiring <b class="orange"> Frontend Software Developer </b>with a focus
+                    on creating web
+                    applications with great
+                    <b class="orange"> user experiences.</b>
+                    <br>
+                    I am currently working on extremely difficult engineering problems and learn from a team consisting
+                    of some of most <b class="orange">talented </b> and <b class="orange"> experienced </b> engineers
+                    everyday.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="Html Logo" class="modal__language--img" />
+                        <span class="language__name">Html</span>
+
+                    </figure>
+
+                    <figure class="modal__language">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
+                            class="modal__language--img" />
+                        <span class="language__name">CSS</span>
+
+                    </figure>
+
+                    <figure class="modal__language">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                            alt="JavaScript Logo" class="modal__language--img" />
+                        <span class="language__name">JavaScript</span>
+
+                    </figure>
+
+                    <figure class="modal__language">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
+                            class="modal__language--img" />
+                        <span class="language__name">React</span>
+
+                    </figure>
+
+
+
+
+                </div>
+
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Let's have a chat</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently pen to new opportunities</h4>
+                <form id="contact__form" action="">
+                    <div class="form__item">
+                        <label class="form__item--label" >Name</label>
+                        <input class="input" name="user_name" type="text" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" ">E-mail</label>
+                        <input class="input" name="user_email" type="email" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" >Message</label>
+                        <textarea class="input" name="Message" type="text" required></textarea>
+                     
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                </form>
+              
+            </div>
+        </div>
     </section>
     <section id="projects">
         <div class="container">
             <div class="row">
                 <h1 class="section__title">
-                    Here is some of my <span class="orange">Projects</span>
+                    H class="language__name"ere is some of my <span c class="language__name"
+                        lass="orange">Projects</span>
+
                 </h1>
                 <ul class="projects__list">
                     <li class="project">
                         <div class="project__wrapper">
                             <img src="/assets/blinker mockup.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
+                            <div class="project__desc
+                            ription">
                                 <h3 class="project__description--title">
                                     Car Sales Projects
                                 </h3>
@@ -110,7 +184,8 @@
                             <img src="/assets/7TE.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">
+                                <h3 class="project__d
+                                escription--title">
                                     7TE MOVIE LIBRARY
                                 </h3>
                                 <h4 class="project__description--sub-title">
@@ -138,7 +213,8 @@
                             <img src="/assets/7TE.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">
+                                <h3 class="project__d
+                                escription--title">
                                     7TE MOVIE LIBRARY
                                 </h3>
                                 <h4 class="project__description--sub-title">
@@ -167,36 +243,37 @@
     <footer>
         <div class="container">
             <div class="row footer__row">
-            <figure>
-                <img class="footer__logo--img" src="/E_PORTFOLIO_LOGO.png" alt="">
-            </figure>
-            <div class="footer__social--list">
-                <a href="#" class="footer__social--link
+                <figure>
+                    <img class="footer__logo--img" src="/assets/E_PORTFOLIO_LOGO.png" alt="">
+                </figure>
+                <div class="footer__social--list">
+
+                    <a href="#" class="footer__social--link
             link__hover-effect
             link__hover-effect--white">
-                    GitHub
-                </a>
-                <a href="#" class="footer__social--link
+                        GitHub
+                    </a>
+                    <a href="#" class="footer__social--link
             link__hover-effect
             link__hover-effect--white">
-                    Linkedin
-                </a>
-                <a href="#" class="footer__social--link
+                        Linkedin
+                    </a>
+                    <a href="#" class="footer__social--link
             link__hover-effect
             link__hover-effect--white">
-                    Contact
-                </a>
-                <a href="#" class="footer__social--link
+                        Contact
+                    </a>
+                    <a href="#" class="footer__social--link
             link__hover-effect
             link__hover-effect--white">
-                    Resume
-                </a>
-            </div>
-            <div class="footer__copyright">
-                Copyright &copy; 2022 Naheen Habib
+                        Resume
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    Copyright &copy; 2022 Naheen Habib
+                </div>
             </div>
         </div>
-    </div>
     </footer>
 </body>
 
