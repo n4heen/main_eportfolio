@@ -4,24 +4,34 @@
 
 function contact(event) {
     event.preventDefault();
-    //     emailjs
-    //     .sendForm(
-    //         'service_u5fxijb',
-    //         'template_lhwmh29',
-    //         event.target,
-    //         'ypzgOSunxrv_S4tiD'
-    //     )
-    //     .then(()=>{
-    //         console.log('This worked')
-    //     })
-    //     console.log("knoggs")
-
-    const loading = document.querySelector('modal__overlay--loading')
-
-    const success = document.querySelector('modal__overlay--success')
-
+    const loading = document.querySelector('.modal__overlay--loading')
+    const success = document.querySelector('.modal__overlay--success')
     loading.classList += " modal__overlay--visible"
+    emailjs
+        .sendForm(
+            'service_u5fxijb',
+            'template_lhwmh29',
+            event.target,
+            'ypzgOSunxrv_S4tiD'
+        )
+        .then(() => {
+      
+            loading.classList.remove("modal__overlay--visible")
+            success.classList += " modal__overlay--visible"
+            console.log('This worked')
+        }).catch(() => {
+            loading.classList += " modal__overlay--visible"
+            alert(
+                "The email service is temporarily unavailable. Please contact me directly on my email naheenhabib36@gmail.com"
+            )
+        })
+
+
+
+
+    
     setTimeout(() => {
+
         console.log('it worked 1')
-    }, 500)
+    }, 1000)
 }
