@@ -2,6 +2,18 @@
 //service_u5fxijb
 //ypzgOSunxrv_S4tiD
 
+let contrastToggle = false
+let isModalOpen = false
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+        document.body.classList += " dark-theme"
+    } else {
+        document.body.classList.remove("dark-theme")
+    }
+}
+
 function contact(event) {
     event.preventDefault();
     const loading = document.querySelector('.modal__overlay--loading')
@@ -15,7 +27,7 @@ function contact(event) {
             'ypzgOSunxrv_S4tiD'
         )
         .then(() => {
-      
+
             loading.classList.remove("modal__overlay--visible")
             success.classList += " modal__overlay--visible"
             console.log('This worked')
@@ -25,13 +37,14 @@ function contact(event) {
                 "The email service is temporarily unavailable. Please contact me directly on my email naheenhabib36@gmail.com"
             )
         })
+}
 
+function toggleModal() {
 
-
-
-    
-    setTimeout(() => {
-
-        console.log('it worked 1')
-    }, 1000)
+    if (isModalOpen) {
+        isModalOpen = false
+        return document.body.classList.remove("modal--open")
+    }
+    isModalOpen = true
+    document.body.classList += " modal--open"
 }
