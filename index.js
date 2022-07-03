@@ -2,8 +2,8 @@
 //service_u5fxijb
 //ypzgOSunxrv_S4tiD
 
-const contrastToggle = false
-const isModalOpen = false
+let contrastToggle = false
+let isModalOpen = false
 const scaleFactor = 1 / 20
 
 function moveBackground(event) {
