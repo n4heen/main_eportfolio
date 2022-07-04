@@ -283,7 +283,7 @@ nav,
 
 /*NAVIGATION*/
 #personal-logo {
-   margin-top: 28px;
+    margin-top: 28px;
     height: 100px;
     width: 100px;
 
@@ -521,6 +521,10 @@ nav {
     text-align: center;
     font-size: 48px;
     margin-bottom: 60px;
+}
+
+.project__link {
+    color: white;
 }
 
 .project__img {
