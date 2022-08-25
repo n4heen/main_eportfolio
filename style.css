@@ -253,23 +253,22 @@ button {
 
 .modal__overlay--visible{
     z-index: 1;
+    display: flex;
 }
 
 .fa-spinner {
-    animation: spinnner 750ms infinite linear;
-}
-
+    animation: spinner 750ms infinite linear;
+  }
 
 @keyframes spinner {
-
     0% {
-        transform: rotate(0);
+      transform: rotate(0);
     }
-
+  
     100% {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
     }
-}
+  }
 
 .modal__overlay--success {
     background-color: #4bb543;
