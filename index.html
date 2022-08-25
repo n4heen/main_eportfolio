@@ -8,6 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<script src="/index.js" defer></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("ypzgOSunxrv_S4tiD");
+        })();
+    </script>
 </head>
 
 <body>
@@ -115,7 +124,7 @@
             <div class="modal__half modal__contact">
                 <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
                 <h4 class="modal__sub-title modal__subtitle--contact">I'm currently open to new opportunities</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact()">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
                         <input class="input" name="user_name" type="text" required>
@@ -131,7 +140,14 @@
                     <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>
 
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon!
+                </div>
             </div>
+            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
     <section id="projects">
