@@ -242,6 +242,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .modal__overlay--loading {
@@ -250,9 +251,14 @@ button {
     z-index: -1;
 }
 
-.fa-spinner {
-    animation: spinnner 750ms infinite;
+.modal__overlay--visible{
+    z-index: 1;
 }
+
+.fa-spinner {
+    animation: spinnner 750ms infinite linear;
+}
+
 
 @keyframes spinner {
 
@@ -273,6 +279,7 @@ button {
     padding: 28px;
     z-index: -1;
 }
+
 
 .modal__exit{
     position: absolute;
