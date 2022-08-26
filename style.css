@@ -7,6 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+ scroll-behavior: smooth;
+}
+
 li {
     list-style: none;
 
@@ -343,7 +347,7 @@ nav,
 
 
 
-.dark-theme .mail__btn{
+.dark-theme .mail__btn {
     color: #242424;
     background-color: white;
 }
@@ -606,4 +610,54 @@ footer {
 .footer__social--link,
 .footer__copyright {
     color: white;
+}
+
+
+/*SMALL PHONES, TABLETS, LARGE SMART PHONES*/
+
+@media (max-width:768px) {
+
+    .title {
+        font-size: 80px;
+
+    }
+
+    .header__para {
+        font-size: 20px;
+
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        height: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+
+    }
+
+}
+
+/*Small Phones*/
+
+@media (max-width:480px) {
+    .title {
+        font-size: 52px;
+    }
+
+    .header__para {
+        font-size: 19px;
+    }
+
+.nav__link:first-child{
+    display: none;
+}
+
+
 }
