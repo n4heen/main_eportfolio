@@ -26,14 +26,14 @@ function contact(event) {
     });
 }
 
-let isModalOpen = false
+let isModalOpen = false;
 
 function toggleModal() {
-
   if (isModalOpen) {
-    return document.body.classList.remove("modal--open")
+    isModalOpen=false
+    return document.body.classList.remove("modal--open");
+  
   }
-
-  isModalOpen = !isModalOpen
-  document.body.classList += " modal--open"
+  isModalOpen = true;
+  document.body.classList += " modal--open";
 }

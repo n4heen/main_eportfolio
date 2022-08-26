@@ -121,8 +121,11 @@ button {
 
 }
 
-/*MODAL*/
+/* 
 
+  MODAL 
+  
+*/
 .modal {
     position: absolute;
     top: 50%;
@@ -131,39 +134,45 @@ button {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     visibility: hidden;
-}
-
-.madal--open .modal{
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+  }
+  .modal--open .modal{
     z-index: 60;
-    box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     visibility: visible;
-}
-
-.modal__half {
+  }
+  .modal__half {
     width: 50%;
     padding: 40px 72px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-}
-
-.modal__about {
+    transition: all 300ms ease-in;
+  }
+  
+  .modal--open .modal__about,
+  .modal--open .modal__contact
+  {
+    transform: translateX(0%);
+  }
+  
+  .modal__about {
     background-color: rgb(245, 245, 245);
-
-}
-
-.modal__languages {
+    transform: translateX(-110%);
+  }
+  
+  .modal__languages {
     display: flex;
     flex-wrap: wrap;
-}
-
-.modal__language {
+  }
+  
+  .modal__language {
     width: 25%;
     padding: 16px;
     position: relative;
@@ -171,104 +180,109 @@ button {
     flex-direction: column;
     align-items: center;
     transition: all 300ms ease;
-}
-
-.modal__language:hover .language__name {
+  }
+  
+  .modal__language:hover .language__name {
     transform: scale(1);
-}
-
-.modal__language:hover {
+  }
+  
+  .modal__language:hover {
     filter: brightness(80%);
     transform: scale(0.9);
-}
-
-.modal__language--img {
-    width: 100%;
-}
-
-.language__name {
+  }
+  
+  .language__name {
     position: absolute;
     bottom: -10px;
     transform: scale(0);
     transition: all 300ms ease;
-
-}
-
-.modal__contact {
+  }
+  
+  .modal__language--img {
+    width: 100%;
+  }
+  
+  .modal__contact {
+    transform: translateX(110%);
     background-color: #242424;
     color: white;
-}
-
-.modal__title {
+  }
+  
+  .modal__title {
     font-size: 26px;
-}
-
-.modal__sub-title {
+  }
+  
+  .modal__sub-title {
     margin: 12px 0 24px 0;
     font-size: 14px;
-}
-
-.modal__para {
+  }
+  
+  .modal__para {
     margin-bottom: 12px;
     line-height: 1.75;
-}
-
-.form__item {
+  }
+  
+  .form__item {
     margin-bottom: 20px;
-
-}
-
-.form__submit {
+  }
+  
+  .form__submit {
     background-color: #f06449;
     border: 2px solid #f06449;
     color: white;
-    font-weight: bold;
-    max-width: 240px;
+    font-weight: 700;
     width: 100%;
+    max-width: 240px;
     padding: 12px 24px;
     font-size: 20px;
     transition: all 300ms ease;
-}
-
-.form__submit:hover {
-    border-color: white;
+  }
+  
+  .form__submit:hover {
+    border-color: #fff;
     background-color: transparent;
-
-}
-
-.form__submit:active {
+  }
+  
+  .form__submit:active {
     border-color: #f06449;
     color: #f06449;
-}
-
-.modal__overlay {
+  }
+  
+  .modal__overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-}
-
-.modal__overlay--loading {
+    z-index: -1;
+  }
+  
+  .modal__overlay--loading {
     background-color: #242424;
     font-size: 80px;
-    z-index: -1;
-}
-
-.modal__overlay--visible{
+  }
+  
+  .modal__overlay--success {
+    background-color: #4bb543;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px;
+  }
+  
+  .modal__overlay--visible {
     z-index: 1;
     display: flex;
-}
-
-.fa-spinner {
+  }
+  
+  .fa-spinner {
     animation: spinner 750ms infinite linear;
   }
-
-@keyframes spinner {
+  
+  @keyframes spinner {
     0% {
       transform: rotate(0);
     }
@@ -277,25 +291,15 @@ button {
       transform: rotate(360deg);
     }
   }
-
-.modal__overlay--success {
-    background-color: #4bb543;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 28px;
-    z-index: -1;
-}
-
-
-.modal__exit{
+  
+  .modal__exit {
     position: absolute;
     top: 30px;
     right: 40px;
-    color: white;
+    color: #fff;
     font-size: 36px;
     z-index: 100;
-}
+  }
 
 /*LANDING PAGE*/
 
@@ -470,7 +474,7 @@ nav {
 
 .project__wrapper:hover .project__description {
     opacity: 1;
-    transform: translateY(-50%);
+    transform: translateX(-10%);
 }
 
 .project__wrapper:hover .project__img {
@@ -482,7 +486,7 @@ nav {
     position: absolute;
     top: 50%;
     left: 90px;
-    transform: translateY(100%);
+    transform: translateX(100%);
     opacity: 0;
     transition: opacity 300ms, transform 450ms ease;
     color: white;
