@@ -415,11 +415,12 @@ nav,
     font-size: 32px;
     border-radius: 50%;
     border: none;
-    background-color: #242424;
+    background-color: #5f5b5b;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
+    z-index:100 ;
 }
 
 .scroll {
@@ -535,7 +536,7 @@ nav {
 
 .project__description {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 90px;
     transform: translateX(100%);
     opacity: 0;
@@ -642,6 +643,21 @@ footer {
 
     }
 
+    .nav__link:first-child{
+        display: none;
+    }
+    
+    .project__description--para{
+    display: none;
+    }
+    
+    .project__description{
+        left: 0;
+        padding: 0;
+        width: 100%;
+    text-align: center;
+    }
+
 }
 
 /*Small Phones*/
@@ -659,5 +675,24 @@ footer {
     display: none;
 }
 
+.project__description--para{
+display: none;
+}
+
+.project__description{
+    left: 0;
+    padding: 0;
+    width: 100%;
+text-align: center;
+}
+
+.project__description--sub-title{
+    margin-bottom: 8px;
+    
+}
+
+.modal__half{
+    padding: 40px;
+}
 
 }
