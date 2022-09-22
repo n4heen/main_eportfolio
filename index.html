@@ -27,27 +27,27 @@
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#" onclick="toggleModal()" class="
                     nav__link--anchor
                     link__hover--effect
                     link__hover--effect--black
                     ">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover--effect
                     link__hover--effect--black
                     ">Projects</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a onclick="toggleModal()" href="#" class="
                     nav__link--anchor
                     link__hover--effect
                     link__hover--effect--black
                     ">Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContrast()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover--effect
@@ -65,7 +65,7 @@
                     web application with great user
                     experiences
                     <br>
-                    Here's a bit more <span class="orange"> about me </span>
+                    Here's a bit more <span class="orange click" onclick="toggleModal()"> about me </span>
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/naheen-habib-251321217" target="_blank"
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -120,6 +120,7 @@
             </div>
         </div>
         <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
             <h3 class="modal__title modal__title--contact">
                 Let's have a chat!
             </h3>
@@ -148,7 +149,7 @@
                 Thanks for the message! Looking foward to speaking to you soon.
             </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
+
     </div>
     <section id="projects">
         <div class="container">
@@ -246,7 +247,7 @@
         <div class="container">
             <div class="row footer__row">
                 <figure>
-                    <img src="/assets/eportfolio_logo.png" class="footer__logo--img" alt="">
+                  <a href="#"> <img src="/assets/eportfolio_logo.png" class="footer__logo--img" alt=""></a> 
                 </figure>
                 <div class="footer__social--list">
                     <a href="#" class="
@@ -259,7 +260,7 @@
                 link__hover--effect
                 link__hover--effect--white
                 ">LinkedIn</a>
-                    <a href="#" class="
+                    <a onclick="toggleModal()" href="#" class="
                 footer__social--link
                 link__hover--effect
                 link__hover--effect--white
