@@ -65,6 +65,11 @@ textarea:focus {
     border-color: #f06449;
 }
 
+.modal--open {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+}
+
 .container {
     padding: 50px 0;
     width: 100%;
@@ -275,7 +280,7 @@ nav {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: hidden;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -387,12 +392,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 
 .modal__overlay--loading {
     background-color: #242424;
     font-size: 80px;
-    z-index: -1;
+
 }
 
 .modal__overlay--success {
@@ -401,7 +407,11 @@ nav {
     font-weight: bold;
     text-align: center;
     padding: 28px;
-z-index: -1;
+
+}
+
+.modal__overlay--visible {
+    z-index: 1;
 }
 
 .fa-spinner {
